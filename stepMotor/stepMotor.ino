@@ -10,6 +10,7 @@ namespace Motor {
 
   class StepMotor {
     // 2 digital pin
+    // using A4988 Driver Module
     public:
       StepMotor(int stepPin, int dirPin) : _stepPin(stepPin), _dirPin(dirPin) {
         pinMode(_stepPin, OUTPUT);

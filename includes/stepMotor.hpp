@@ -56,6 +56,7 @@ namespace Motor {
 
 // Example /////////////////////////////////////////////////
 
+/*
 const int stepPin = 3;
 const int dirPin = 4;
 Motor::StepMotor m1(stepPin, dirPin);
@@ -70,3 +71,4 @@ void loop() {
     m1.runStep(Motor::BACKWARD, 600);
     delay(1000);
 }
+*/

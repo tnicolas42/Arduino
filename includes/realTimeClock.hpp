@@ -100,7 +100,9 @@ namespace Clock {
     };
 }
 
+// Example /////////////////////////////////////////////////
 
+/*
 Clock::RealTimeClock clock;
 
 void setup() {
@@ -110,11 +112,11 @@ void setup() {
     // sec, min, hour
     // day of week ([1-7]: sunday = 1), day of month
     // month, year
-    // clock.setTime(0, 23, 18, /* seconds, minutes, hour */
-    //               7, /* day of week */
-    //               1, /* day of month */
-    //               2, /* month */
-    //               2020  /* year */);
+    // clock.setTime(0, 23, 18, // seconds, minutes, hour
+    //               7, // day of week
+    //               1, // day of month
+    //               2, // month
+    //               2020);  // year
 }
 
 void loop() {
@@ -128,3 +130,4 @@ void loop() {
     clock.displayTime();
     delay(1000);
 }
+*/

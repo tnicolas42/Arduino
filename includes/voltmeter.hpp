@@ -21,6 +21,7 @@ namespace Volt {
 
 // Example /////////////////////////////////////////////////
 
+/*
 int voltPin = A0;
 Volt::Voltmeter voltmeter(voltPin);
 
@@ -31,3 +32,4 @@ void setup() {
 void loop() {
     Serial.println(voltmeter.getVoltage());
 }
+*/

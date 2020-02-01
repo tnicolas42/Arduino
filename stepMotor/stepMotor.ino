@@ -26,7 +26,7 @@ namespace Motor {
         _speed = (int)mapFloat(speed_, 0, 100, 32000, 500);
       }
   
-      void runStep(Direction dir, int nbSteps) {
+      void runStep(Direction dir, int nbSteps) {  // 200 steps for 360deg
         if (_speed == 0)
           return;
         if (dir == FORWARD) {
@@ -41,6 +41,10 @@ namespace Motor {
           digitalWrite(_stepPin,LOW); 
           delayMicroseconds(_speed); 
         }
+      }
+
+      void runDeg(Direction dir, int nbDegrees) {  // 200 steps for 360deg
+        runStep(dir, (int)mapFloat(nbDegrees, 0, 360, 0, 200));
       }
   
     private:

@@ -57,6 +57,8 @@ namespace Motor {
 // Example /////////////////////////////////////////////////
 
 /*
+#include "stepMotor.hpp"  // ln -s ../includes/stepMotor.hpp stepMotor.hpp
+
 const int stepPin = 3;
 const int dirPin = 4;
 Motor::StepMotor m1(stepPin, dirPin);

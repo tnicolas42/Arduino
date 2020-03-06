@@ -37,7 +37,11 @@ void takePicture() {
 	Serial.println("take picture");
 	setDay(false);
 	enableLed(true);
-	delay(5000);
+	delay(7000);
+	servoMotor.write(75);
+	delay(300);
+	servoMotor.write(50);
+	delay(300);
 	servoMotor.write(75);
 	delay(300);
 	servoMotor.write(50);
@@ -78,17 +82,17 @@ void loop() {
     clock.getTime(&second, &minute, &hour, &dayOfWeek, &dayOfMonth, &month, &year);
 
 	// pictures every X sed
-	if (millis() - timeLastPhoto > (uint32_t)50 * (uint32_t)1000) {
+	if (millis() - timeLastPhoto > (uint32_t)40 * (uint32_t)1000) {
 		takePicture();
 	}
 
 	// set day / night cycle
-    // if (hour >= START_DAY_HOUR && hour <= END_DAY_HOUR) {
+    if (hour >= START_DAY_HOUR && hour <= END_DAY_HOUR) {
         setDay(true);
-    // }
-	// else {
-    //     setDay(false);
-	// }
+    }
+	else {
+        setDay(false);
+	}
 
 	// if (millis() - timeLastMoveMotor > (uint32_t)150 * (uint32_t)1000 * (uint32_t)5) {
 	// // if (millis() - timeLastMoveMotor > (uint32_t)432 * (uint32_t)1000 * (uint32_t)5) {
